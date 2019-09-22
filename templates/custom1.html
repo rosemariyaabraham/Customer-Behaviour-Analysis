@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+  * {box-sizing: border-box}
+	
+div {
+  width: 100%
+}
+.body_image{
+
+  padding:50px 700px;
+  
+  background-image:url('/static/hdimage1.jpg');
+  
+  background-size: 1500px 1200px;
+  background-repeat: no-repeat;
+  
+  
+
+}
+
+.body_image  {
+  text-align= centre;
+}
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid red;
+  background-color: blue;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color:gray;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 30px 30px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+  font font-family: cambria;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: white;
+  font-family: cambria;
+}
+
+
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 50px 50px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+  height: 100%
+  width:100%;
+}
+.tablinks{
+  height: 20px;
+  
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  float: left;
+}
+
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@font-face {
+  font-family: 'thefont';
+  src: url('fonts/the-font.otf');
+  font-style: normal;
+}
+
+
+h1{
+	color: blue;
+	font-family: Times New Roman Georgia;
+	font-size: 200%;
+	border: 1px solid white;
+	padding: 10px;
+  text-align: center;
+
+}
+h2{color: black;
+  font-family: Times New Roman Georgia;
+  text-align: center;
+  padding: 10px;
+  background-color: gray;
+
+}
+p{color: black;}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: black;
+  color: red;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.next {
+  background-color: inherit;
+  color: black;
+  position: absolute;
+  right: 15px;
+}
+</style>
+</head>
+<body>
+
+  
+
+
+<img src="{{url_for('static',filename='logo.png')}}" style="margin-left:20px;",width="2",height="2">
+	
+<h1>LET WE KNOW</h1>
+<h2>FP VISION</h2>
+<nav class = 'navbar navbar-b navbar-trans navbar-expand-md fixed-top'>
+<div class="tab">
+
+<button class="tablinks" onclick="openCity(event, 'home')">HOME</button>
+<form action="/about1">
+<button class="tablinks">Why "Let We Know"</button>
+</form>
+<form action="/team1">
+<button class="tablinks">Partners</button>
+</form>
+<form action="/work1">
+<button class="tablinks">Features</button>
+</form>
+<form action="/analyst">
+<button class="tablinks">"How It Works"</button>
+</form>
+<form action="/out">
+<button class="tablinks">Result</button>
+</form>
+<form class="example" action="/action_page.php">
+<input type="text" placeholder="Search.." name="search">
+<button type="submit"><i class="fa fa-search"></i></button>
+</form>
+</div>
+</nav>
+
+<div class="body_image">
+  
+  
+  <h3>FP vision explains why should select "Let We Know" for your AI based smart camera solution.</h3>
+</div>
+<div id="home" class="tabcontent">
+</div>
+
+
+
+
+
+<script>
+	function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+
+</script>
+</body>
+</html>
